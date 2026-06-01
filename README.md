@@ -1,4 +1,4 @@
-# Intent-to-Software Workflow Scaffold
+# Codex Scaffold Workflow
 
 ## Overview
 
