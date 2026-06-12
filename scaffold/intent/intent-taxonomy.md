@@ -12,6 +12,7 @@ Use it before creating new folders or documents. The goal is traceability: a fut
 4. Prefer one focused artifact over scattered notes.
 5. Link related intent files instead of copying long sections between folders.
 6. Include placement rationale in every new ideation packet.
+7. Before publishing tracked source, decide whether newly created files/folders are public source, provider-specific source, generated output, private/local artifacts, or intent-only project memory.
 
 ## Fast Context Loading
 
@@ -19,6 +20,7 @@ Before opening long historical artifacts, read:
 
 - `intent/00-active-context.md`
 - the relevant workstream `CURRENT.md`, when present
+- the compact feature status map and slice ledger, when a feature is in Feature Slice Context Compaction Mode
 
 Use targeted `rg` lookups for backlog IDs, bug IDs, route names, function names, and artifact titles. Open full discovery packets, slice plans, and slice reviews only when current summaries are insufficient, the user asks for history, or a decision depends on earlier rationale.
 
@@ -250,4 +252,3 @@ Agent teams should stop and report when one of these conditions is met:
 - Remaining ideas are backlog candidates rather than part of the current scope.
 
 Do not keep expanding scope to improve the taxonomy, roadmap, or UI indefinitely. Place the idea, document the reason, identify the next artifact, and stop.
-

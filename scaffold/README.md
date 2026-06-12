@@ -10,6 +10,8 @@ It is designed to be copied into a new repository before or during ideation. The
 - `.codex/agents/`: read-only specialist roles for product, delivery, architecture, UX, frontend, backend, QA, security, data, platform, network, and compliance review.
 - `.codex/skills/`: project workflow skills for routing, discovery, slice planning, implementation, bug intake, and backlog refinement.
 - `AGENTS.md`: default instructions for agents working in a project that uses this structure.
+- Optional compact feature status maps and slice ledgers for long-running feature chains.
+- Repository publication checks so new files/folders are intentionally tracked, ignored, or kept local.
 
 ## Quick Start
 
@@ -46,6 +48,8 @@ idea or problem report
 - Park adjacent ideas in backlog or follow-up sections instead of expanding the current scope.
 - Link related artifacts instead of copying long rationale across files.
 - Keep feature priority, workstream status, and bug status in their canonical ledgers.
+- For long-running feature chains, use compact status maps and slice ledgers before loading every historical slice artifact.
+- Before publishing source, check whether newly created folders/files are public source, provider-specific source, generated output, private/local artifacts, or intent-only project memory.
 
 ## Folder Map
 

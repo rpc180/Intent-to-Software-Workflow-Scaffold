@@ -73,6 +73,9 @@ Specialists not included:
 
 ## Agent Coverage
 
+- Reused existing agent findings:
+- Newly spawned agents and why reuse was insufficient:
+- Agents closed after use:
 - Consulted agents:
 - Intentionally excluded specialists:
 - Implementation re-consultation triggers:

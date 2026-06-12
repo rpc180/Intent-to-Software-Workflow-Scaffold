@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow Slice Planning"
+  short_description: "Plans approved implementation slices."
+  default_prompt: "Create an approval-ready implementation slice plan for this scope."
+

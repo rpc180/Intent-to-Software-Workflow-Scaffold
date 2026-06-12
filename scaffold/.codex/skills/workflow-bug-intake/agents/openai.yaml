@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow Bug Intake"
+  short_description: "Captures bugs in a single project ledger."
+  default_prompt: "Capture this bug report in the project bug ledger."
+

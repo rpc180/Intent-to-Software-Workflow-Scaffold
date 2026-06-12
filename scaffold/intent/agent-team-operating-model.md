@@ -14,6 +14,8 @@ The operating goal is traceability without churn: assemble the smallest useful t
 
 Agents should start with `intent/00-active-context.md` and the relevant workstream `CURRENT.md` before opening full historical discovery packets, slice plans, or slice reviews.
 
+When a feature is in Feature Slice Context Compaction Mode, agents should read the compact feature status map and slice ledger before older slice artifacts. Propose compact mode when a feature has many accepted slices, repeated context-length pressure, or decision drift caused by rereading long historical chains.
+
 Use targeted `rg` lookups for backlog IDs, bug IDs, route names, function names, and artifact titles. Open older long artifacts only when the current summaries are insufficient, the user asks for history, or a decision depends on earlier rationale.
 
 When a run changes current state, update the relevant `CURRENT.md` and active tracker rows instead of copying long rationale into multiple files.
@@ -39,6 +41,14 @@ Add specialists only when their domain is materially affected:
 Do not add a specialist only because the topic is adjacent. If the current run will not make a decision or produce an artifact in that domain, capture the idea as a follow-up candidate.
 
 Agent coverage should be explicit. A domain being mentioned in a discovery packet or slice plan does not mean the relevant specialist reviewed it unless the artifact records that consultation. Discovery and planning artifacts should list consulted agents, intentionally excluded specialists, and implementation-phase findings that should trigger focused re-consultation.
+
+## Agent Lifecycle Hygiene
+
+Before spawning a new subagent, check whether an existing active, recent, or recorded specialist consultation already covers the same domain and scope. Prefer reuse when the prior agent reviewed the same artifact set, decision, risk, or implementation surface and the inputs have not materially changed.
+
+Reuse can mean relying on the recorded findings, sending follow-up input to the existing agent, or resuming a closed agent when the runtime supports it. Spawn a new agent only when prior coverage is unavailable, stale, scoped differently, inaccessible, or a distinct parallel task is needed. When a new agent is spawned despite existing related coverage, record why reuse was insufficient.
+
+After integrating a subagent's result, close completed agent threads that are no longer needed when the runtime exposes agent management. If live agent status is not inspectable, rely on the current thread, artifact notes, and recorded consultation history; do not invent agent state.
 
 ## Coordinator Responsibilities
 
@@ -100,6 +110,8 @@ Implementation must honor the project constraints captured in intent:
 
 During implementation, re-check the plan's agent coverage against actual touched files, validation results, and newly uncovered edge cases. Use project agents for focused review when concrete findings materially affect their domain, even if that domain was already mentioned or reviewed during planning. Keep those reviews bounded to the approved scope; park any recommended scope expansion for separate approval.
 
+Before review closeout, perform a repository publication check for newly created, moved, generated, ignored, or tracked files/folders. Decide whether each is public source, provider-specific source, generated output, private/local artifact, or intent-only project memory, and do not publish files that misrepresent the architecture, expose private data, or belong only in local development.
+
 ### Review / Showcase Gate
 
 Stop when the work can be demonstrated or reviewed against acceptance criteria.
@@ -112,6 +124,7 @@ The review handoff should include:
 - which risks remain
 - which follow-ups were parked
 - whether runtime files were changed
+- whether newly created files/folders were intentionally tracked, ignored, moved, or kept local
 - whether any agent-recommended workstreams need backlog updates
 
 ## Loop Controls
@@ -122,6 +135,7 @@ Use these controls to prevent endless improvement loops:
 - Every discovery packet names `In Scope`, `Out of Scope`, `Stop condition`, and `Backlog / Follow-Up Candidates`.
 - Adjacent ideas are parked instead of pursued.
 - Current summaries are updated instead of rereading or rewriting long historical artifacts by default.
+- Long-running feature chains can use compact feature status maps and slice ledgers instead of repeatedly loading every historical slice artifact.
 - Taxonomy improvements are suggested only when placement is blocked.
 - Roadmap tracking does not replace the feature backlog.
 - The coordinator can stop a run after the useful next artifact is known, even if more refinements are possible.

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow Backlog Refinement"
+  short_description: "Aligns backlog, workstreams, and bug status."
+  default_prompt: "Refine the backlog, workstream tracker, and bug ledger alignment."
+

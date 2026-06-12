@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow Intent Router"
+  short_description: "Routes project requests to the right workflow."
+  default_prompt: "Route this project request to the correct intent workflow, artifact, and stop gate."
+

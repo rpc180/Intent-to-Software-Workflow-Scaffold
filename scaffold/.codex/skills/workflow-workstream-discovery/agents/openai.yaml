@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow Discovery"
+  short_description: "Creates bounded discovery packets from project ideas."
+  default_prompt: "Create a bounded discovery packet for this workstream idea."
+

@@ -43,8 +43,28 @@ Manual or browser smoke:
 Accessibility or usability checks:
 - <Observed result>
 
+## Repository Publication Check
+
+New tracked files or folders:
+- `<path>`: <public source | provider-specific source | generated artifact | private/local artifact | intent-only project memory>
+
+Ignored or local-only files/folders reviewed:
+- `<path or pattern>`: <reason>
+
+Publication decision:
+- <Tracked intentionally | moved local-only | added to ignore rules | parked for follow-up>
+
+Provider-neutrality check:
+- <No provider lock-in implied, or document why provider-specific files are tracked.>
+
+Sensitive-data check:
+- <No secrets, private emails, credentials, raw exports, generated provider output, or private operational notes included.>
+
 ## Agent Coverage
 
+- Reused existing agent findings:
+- Newly spawned agents and why reuse was insufficient:
+- Agents closed after use:
 - Consulted agents:
 - Intentionally excluded specialists:
 - Implementation re-consultation triggers:
@@ -83,6 +103,9 @@ Workstream tracker:
 
 Active context:
 - <Update needed or "No active-context update needed">
+
+Compact feature artifacts:
+- <Feature status map / slice ledger update needed, or "Not using compact mode">
 
 ## Recommended Next Slice Development Topic
 

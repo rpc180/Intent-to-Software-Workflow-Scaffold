@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow Slice Implementation"
+  short_description: "Implements approved slices through closeout."
+  default_prompt: "Implement this approved slice and close it out against its review gate."
+

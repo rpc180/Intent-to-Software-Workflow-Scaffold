@@ -1,0 +1,92 @@
+[features]
+multi_agent = true
+
+[agents]
+max_threads = 8
+max_depth = 1
+job_max_runtime_seconds = 1800
+
+[agents.product_owner]
+description = "Product owner who clarifies mission outcomes, user value, scope, acceptance criteria, and release priorities for project development efforts."
+config_file = "./agents/product-owner.toml"
+nickname_candidates = ["PO", "Value Lead", "Scope Steward"]
+
+[agents.delivery_lead]
+description = "Project manager and delivery lead who identifies sequencing, dependencies, decision points, stop gates, and definition-of-done gaps."
+config_file = "./agents/delivery-lead.toml"
+nickname_candidates = ["Delivery Lead", "Flow Lead", "Scope Gate"]
+
+[agents.solution_architect]
+description = "Solution architect who evaluates system boundaries, service contracts, integration patterns, maintainability, and non-functional requirements."
+config_file = "./agents/solution-architect.toml"
+nickname_candidates = ["Architect", "Systems Lead", "Design Authority"]
+
+[agents.security_engineer]
+description = "Security engineer who reviews threat models, identity and access, data handling, secrets, dependency risks, and secure defaults."
+config_file = "./agents/security-engineer.toml"
+nickname_candidates = ["Security", "Threat Modeler", "Control Lead"]
+
+[agents.platform_sre]
+description = "Platform and SRE specialist who reviews runtime shape, deployment assumptions, observability, reliability, recovery, and operational readiness."
+config_file = "./agents/platform-sre.toml"
+nickname_candidates = ["SRE", "Platform", "Ops Lead"]
+
+[agents.network_admin]
+description = "Network administrator who reviews service connectivity, ports, DNS/TLS assumptions, segmentation, proxy behavior, and external dependency exposure."
+config_file = "./agents/network-admin.toml"
+nickname_candidates = ["Network", "Connectivity", "Boundary Lead"]
+
+[agents.data_dba]
+description = "Database administrator and data architect who reviews schema, migrations, seed data, indexing, query safety, lineage, and recovery concerns."
+config_file = "./agents/data-dba.toml"
+nickname_candidates = ["DBA", "Data Lead", "Schema Steward"]
+
+[agents.ux_designer]
+description = "UX designer and research translator who reviews user journeys, information architecture, accessibility, workflow clarity, and end-user fit."
+config_file = "./agents/ux-designer.toml"
+nickname_candidates = ["UX", "Research Translator", "Experience Lead"]
+
+[agents.frontend_engineer]
+description = "Frontend UX engineer who reviews UI code, state behavior, accessibility implementation, responsiveness, and interaction quality."
+config_file = "./agents/frontend-engineer.toml"
+nickname_candidates = ["Frontend", "UI Engineer", "Interaction Lead"]
+
+[agents.backend_engineer]
+description = "Backend engineer who reviews APIs, service boundaries, data access, validation, error handling, and testability."
+config_file = "./agents/backend-engineer.toml"
+nickname_candidates = ["Backend", "API Lead", "Service Lead"]
+
+[agents.qa_engineer]
+description = "QA and test engineer who reviews test strategy, missing coverage, regressions, edge cases, acceptance criteria, and release confidence."
+config_file = "./agents/qa-engineer.toml"
+nickname_candidates = ["QA", "Test Lead", "Release Gate"]
+
+[agents.compliance_reviewer]
+description = "Compliance and governance reviewer who maps requirements, controls, policy evidence, auditability, records, and decision traceability."
+config_file = "./agents/compliance-reviewer.toml"
+nickname_candidates = ["Compliance", "Governance", "Audit Lead"]
+
+[[skills.config]]
+path = ".codex/skills/workflow-intent-router"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/workflow-workstream-discovery"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/workflow-slice-planning"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/workflow-slice-implementation"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/workflow-bug-intake"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/workflow-backlog-refinement"
+enabled = true
+

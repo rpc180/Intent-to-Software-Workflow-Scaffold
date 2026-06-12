@@ -10,8 +10,9 @@ Default path:
 
 1. Read this file.
 2. Read the relevant workstream `CURRENT.md`, if one exists.
-3. Use targeted `rg` for backlog IDs, bug IDs, route names, file names, or artifact titles.
-4. Open detailed historical artifacts only when the current summaries are insufficient, the user asks for history, or a decision depends on earlier rationale.
+3. If the feature is in Feature Slice Context Compaction Mode, read its compact feature status map and slice ledger.
+4. Use targeted `rg` for backlog IDs, bug IDs, route names, file names, or artifact titles.
+5. Open detailed historical artifacts only when the current summaries are insufficient, the user asks for history, or a decision depends on earlier rationale.
 
 Do not reread every accepted slice plan or review by default.
 
@@ -49,4 +50,3 @@ Do not reread every accepted slice plan or review by default.
 - Bug row: `rg -n "<BUG-###>" intent/roadmap/05-bug-ledger.md`
 - Workstream row: `rg -n "<Workstream name>" intent/roadmap/04-agent-discovered-workstreams.md`
 - Touched runtime surface: use `rg` in `<implementation-root>/` for route/function/file names before opening broad files.
-

@@ -8,7 +8,7 @@ For routine agent work, start with the lightweight active context digest:
 
 - `00-active-context.md`
 
-Then read the relevant workstream `CURRENT.md` file before opening full historical discovery packets, slice plans, or slice reviews. Use targeted `rg` lookups for specific backlog IDs, bug IDs, route names, source files, and artifact titles. Open long historical artifacts only when the current summaries are insufficient, the user asks for history, or a decision depends on earlier rationale.
+Then read the relevant workstream `CURRENT.md` file before opening full historical discovery packets, slice plans, or slice reviews. If a long-running feature is in Feature Slice Context Compaction Mode, read its compact feature status map and slice ledger before opening older artifacts. Use targeted `rg` lookups for specific backlog IDs, bug IDs, route names, source files, and artifact titles. Open long historical artifacts only when the current summaries are insufficient, the user asks for history, or a decision depends on earlier rationale.
 
 Recommended local structure:
 
@@ -57,6 +57,8 @@ Intent artifact placement rules are defined in:
 Reusable writing scaffolds are available in:
 
 - `templates/`
+
+Before tracked source is published, use slice review publication checks to confirm newly created files/folders are intended public source rather than generated output, private/local artifacts, provider-specific setup that should stay local, or intent-only project memory.
 
 Agent team guidance is defined in:
 

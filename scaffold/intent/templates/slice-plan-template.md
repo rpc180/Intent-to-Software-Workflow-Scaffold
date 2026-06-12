@@ -45,6 +45,14 @@ Secondary users:
 2. <Second dependency or implementation phase>
 3. <Validation or showcase phase>
 
+## Feature Compaction / Context Posture
+
+- <Not needed | already active | propose Feature Slice Context Compaction Mode>
+- If active or proposed, compact artifacts:
+  - `intent/<area>/workstreams/<yyyy-mm-dd-topic>/<NN>-feature-status-map-<feature>.md`
+  - `intent/<area>/workstreams/<yyyy-mm-dd-topic>/<NN>-slice-ledger-<feature>.md`
+- <State why compact mode is or is not warranted for this feature chain.>
+
 ## Likely Files / Contracts Touched
 
 Frontend:
@@ -61,6 +69,20 @@ Tests:
 
 Intent docs:
 - `intent/...`
+
+## Repository Publication Expectations
+
+Expected new tracked files or folders:
+- `<path>`: <public source | provider-specific source | generated artifact | private/local artifact | intent-only project memory>
+
+Expected ignored or local-only files/folders:
+- `<path or pattern>`: <why it should not be published>
+
+Provider-neutrality or public repo story:
+- <State whether any provider-specific files are intentionally tracked and why, or say no provider-specific publication is expected.>
+
+Sensitive-data boundary:
+- <State whether secrets, private emails, credentials, raw exports, generated provider output, or private operational notes are excluded.>
 
 ## Implementation Acceptance Criteria
 
@@ -126,6 +148,9 @@ Do not continue into:
 
 ## Agent Coverage
 
+- Reused existing agent findings:
+- Newly spawned agents and why reuse was insufficient:
+- Agents to close after results are integrated:
 - Consulted agents:
 - Intentionally excluded specialists:
 - Implementation re-consultation triggers:
